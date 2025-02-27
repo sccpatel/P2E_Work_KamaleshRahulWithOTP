@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="18" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="18" parallel="tests" name="One(failed)">
+    <classes>
+      <class name="com.p2e.Runner.P2E_FirstClass">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="runnerFirst"/>
+          <include name="runnerThird"/>
+          <include name="runnerFour"/>
+          <include name="afterMethod"/>
+          <include name="runnerSix"/>
+          <include name="runnerFive"/>
+          <include name="otpBalanace"/>
+          <include name="runnerSecond"/>
+        </methods>
+      </class> <!-- com.p2e.Runner.P2E_FirstClass -->
+    </classes>
+  </test> <!-- One(failed) -->
+  <test thread-count="18" parallel="tests" name="two(failed)">
+    <classes>
+      <class name="com.p2e.Runner.P2E_SecondClass">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="runnerFirst"/>
+          <include name="runnerThird"/>
+          <include name="runnerFour"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="runnerSecond"/>
+          <include name="runnerFive"/>
+        </methods>
+      </class> <!-- com.p2e.Runner.P2E_SecondClass -->
+    </classes>
+  </test> <!-- two(failed) -->
+</suite> <!-- Failed suite [Suite] -->

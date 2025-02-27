@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="18" parallel="tests">
+    <test thread-count="18" name="One">
+        <classes>
+            <class name="com.p2e.Runner.P2E_FirstClass"/>
+        </classes>
+    </test>
+    
+    <test thread-count="18" name="two">
+        <classes>
+            <class name="com.p2e.Runner.P2E_SecondClass"/>
+        </classes>
+    </test>
+    
+</suite>
