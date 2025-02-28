@@ -357,8 +357,8 @@ public class VideoAndQuestion extends VideoAndQuestionOr {
 				refreshPageAndVideoPlay(waitNum, 40);
 				waitNum = waitNum + 1;
 //				util.thread(200);
+				util.mouseClick(getVideoButton());
 				if (getAllaccept().size() >= 1) {
-
 					util.printMessage("First Video Waiting  Successfully");
 					util.click(getNextButton(), "Next Button");
 					util.implicitilyOfSeconds(40);
