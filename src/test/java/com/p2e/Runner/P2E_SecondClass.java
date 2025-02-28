@@ -10,31 +10,31 @@ public class P2E_SecondClass extends BaseTest {
 	@Test
 	public void runnerFirst() {
 		LoginTestScript videoRun = new LoginTestScript();
-		videoRun.verifyNau_001_P2ELoginPage(0, 1, "ExcelData\\P2EFormFillReport1.xlsx");
+		videoRun.verifyNau_001_P2ELoginPage(0,  "ExcelData\\P2EFormFillReport1.xlsx");
 	}
 
 	@Test
 	public void runnerSecond() {
 		LoginTestScript videoRun = new LoginTestScript();
-		videoRun.verifyNau_001_P2ELoginPage(1, 1, "ExcelData\\P2EFormFillReport2.xlsx");
+		videoRun.verifyNau_001_P2ELoginPage(1,  "ExcelData\\P2EFormFillReport2.xlsx");
 	}
 
 	@Test
 	public void runnerThird() {
 		LoginTestScript videoRun = new LoginTestScript();
-		videoRun.verifyNau_001_P2ELoginPage(2, 1, "ExcelData\\P2EFormFillReport3.xlsx");
+		videoRun.verifyNau_001_P2ELoginPage(2,  "ExcelData\\P2EFormFillReport3.xlsx");
 	}
 
 	@Test
 	public void runnerFour() {
 		LoginTestScript videoRun = new LoginTestScript();
-		videoRun.verifyNau_001_P2ELoginPage(3, 1, "ExcelData\\P2EFormFillReport4.xlsx");
+		videoRun.verifyNau_001_P2ELoginPage(3,  "ExcelData\\P2EFormFillReport4.xlsx");
 	}
 
 	@Test
 	public void runnerFive() {
 		LoginTestScript videoRun = new LoginTestScript();
-		videoRun.verifyNau_001_P2ELoginPage(4, 1, "ExcelData\\P2EFormFillReport5.xlsx");
+		videoRun.verifyNau_001_P2ELoginPage(4,  "ExcelData\\P2EFormFillReport5.xlsx");
 	}
 
 }

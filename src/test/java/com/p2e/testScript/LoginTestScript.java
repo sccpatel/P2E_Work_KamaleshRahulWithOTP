@@ -16,25 +16,24 @@ import com.p2e.Base.BaseTest;
 public class LoginTestScript extends BaseTest {
 
 	@Test
-	public void verifyNau_001_P2ELoginPage(int runOtpID,int rowCount, String excelFilePath) {
+	public void verifyNau_001_P2ELoginPage(int runOtpID , String excelFilePath) {
 		FlashLogin otp = new FlashLogin(webUtil);
 		otp.openNewTabAnsLaunchOTP(runOtpID);
 
 		int firstcount = 1;
 		while (true) {
-			int ro =webUtil.readAndWriteDataInToExcel("Excel Row Write  ", "ExcelData\\CSC_StateDistAndCenterName.xlsx");
-			rowCount = ro-1;
+			
 			try {
-//				Login lgn = new Login(webUtil);
-//				for (int i = 0; true; i++) {
-//					lgn.login();
-//					String wrOtp =lgn.findWringOtp();
-//					if(wrOtp==null) {
-//						break;
-//					}else {
-//						continue;
-//					}
-//				}
+				Login lgn = new Login(webUtil);
+				for (int i = 0; true; i++) {
+					lgn.login();
+					String wrOtp =lgn.findWringOtp();
+					if(wrOtp==null) {
+						break;
+					}else {
+						continue;
+					}
+				}
 
 			} catch (Exception e) {
 				System.out.println("Login Option is Not Complite Successfully");
@@ -46,7 +45,7 @@ public class LoginTestScript extends BaseTest {
 			try {
 				System.out.println("I am Waiting For Ragistation ");
 				RagistationForm ragPage = new RagistationForm(webUtil);
-				ragPage.ragistationForm(rowCount , excelFilePath);
+				ragPage.ragistationForm( excelFilePath);
 
 				VideoAndQuestion qu = new VideoAndQuestion(webUtil);
 				qu.QuestionAnswer(firstcount);
@@ -57,14 +56,14 @@ public class LoginTestScript extends BaseTest {
 					System.out.println("Form Already Submited and Edit form  is editing wait  Successfuly");
 //					webUtil.thread(1000);
 					VideoAndQuestion qu = new VideoAndQuestion(webUtil);
-					qu.signOutAndTackSnapShortPage(rowCount, excelFilePath);
+					qu.signOutAndTackSnapShortPage( excelFilePath);
 					System.out.println(" Video is waiting  Successfuly");
 					qu.QuestionAnswer(firstcount);
 				} catch (Exception r) {
 					System.out.println("Ragistation and Video is not complit Successfuly");
 				}
 			}
-			rowCount = rowCount+1;
+//			rowCount = rowCount+1;
 		}
 
 	}

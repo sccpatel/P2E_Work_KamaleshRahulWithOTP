@@ -248,14 +248,14 @@ public class VideoAndQuestion extends VideoAndQuestionOr {
 
 	}
 
-	public void signOutAndTackSnapShortPage(int rowCount,String excelFilePath) {
+	public void signOutAndTackSnapShortPage(String excelFilePath) {
 		try {
 			util.thread(600);
 			util.click(getProfileButton(), "Click My Profile", 30);
 			util.thread(600);
 			util.click(getEditProfile(), "Edit Profile ", 30);
 			RagistationForm rg = new RagistationForm(util);
-			rg.selectStatDistAndCenter(rowCount ,excelFilePath);
+			rg.selectStatDistAndCenter(excelFilePath);
 			
 
 //			util.click(getDoneSubmit(), "Re Submit Form Successfully");

@@ -23,10 +23,12 @@ public class RagistationForm extends RagistationFormOr {
 //	String link = null;
 /////////////////////////////////////////////////////////////////////////////////				
 
-	public void ragistationForm(int rowCount, String excelFilePath) {
-//		selectStateDistAndCenter(selectState);
+	public void ragistationForm(String excelFilePath) {
 		waitTillRagistation();
-
+		int ro =util.readAndWriteDataInToExcel("Excel Row Write  ", "ExcelData\\CSC_StateDistAndCenterName.xlsx");
+		rowCount = ro-1;
+		util.thread(800);
+		
 		ArrayList<String> nalist = util.readDataFromExcelSheet(rowCount, "ExcelData\\RahulP2E_NameAndState.xlsx");
 		String name = nalist.get(0);
 		String gender = nalist.get(1);
@@ -285,9 +287,11 @@ public class RagistationForm extends RagistationFormOr {
 /////////////////////////////////////////////////////////////////////////////////					
 		}
 	}
-
-	public void selectStatDistAndCenter(int rowCount, String excelFilePath) {
-//		selectStateDistAndCenter(selectState);
+int rowCount = 1;
+	public void selectStatDistAndCenter( String excelFilePath) {
+		int ro =util.readAndWriteDataInToExcel("Excel Row Write  ", "ExcelData\\CSC_StateDistAndCenterName.xlsx");
+		rowCount = ro-1;
+		util.thread(800);
 		ArrayList<String> nalist = util.readDataFromExcelSheet(rowCount, "ExcelData\\RahulP2E_NameAndState.xlsx");
 		String name = nalist.get(0);
 		String gender = nalist.get(1);
