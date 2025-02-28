@@ -123,7 +123,7 @@ public class RagistationFormOr {
 	@FindBy(xpath = "//div[@class='sc-koyXVk jBwCtq']")
 	private WebElement screen2;
 	
-	@FindBy(xpath = "//div[@class='ms-Panel-scrollableContent scrollableContent-165']")
+	@FindBy(xpath = "//div[contains(@class,'ms-Panel-scrollableContent scrollableContent')]")
 	private WebElement screen3;
 	
 	@FindBy(xpath = "//div[@id='Profile']")

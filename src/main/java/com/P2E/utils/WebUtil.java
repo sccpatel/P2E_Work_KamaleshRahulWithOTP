@@ -1868,7 +1868,7 @@ public class WebUtil {
 				WebDriverWait webWait = new WebDriverWait(driver, Duration.ofSeconds(durationOfSecond));
 				webWait.until(ExpectedConditions.visibilityOf(webObj));
 			} catch (Exception q) {
-				printMessage(elementName + "  is not found successfully ");
+//				printMessage(elementName + "  is not found successfully ");
 			}
 
 			if (webObj.isDisplayed() && webObj.isEnabled()) {
@@ -1906,7 +1906,7 @@ public class WebUtil {
 
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 			statusAndResult(Status.INFO, elementName + " element is not clicked successfully");
 		}
 	}
@@ -2758,7 +2758,7 @@ public class WebUtil {
 				try {
 					act.click(webObj).build().perform();
 					statusAndResult(Status.INFO, "Click action is done successfully by Actions method");
-					printMessage("Click Mouse is done successfully by Actions method");
+//					printMessage("Click Mouse is done successfully by Actions method");
 				} catch (StaleElementReferenceException e) {
 					act.click(webObj).build().perform();
 					statusAndResult(Status.INFO, "Click action is done successfully by Actions method");
@@ -2776,7 +2776,7 @@ public class WebUtil {
 
 			}
 		} catch (Exception e) {
-
+//			printMessage("Click Mouse is not successfully by Actions method");
 		}
 	}
 

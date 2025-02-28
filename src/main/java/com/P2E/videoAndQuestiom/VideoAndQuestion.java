@@ -278,7 +278,8 @@ public class VideoAndQuestion extends VideoAndQuestionOr {
 			for (int i = 0; true; i++) {
 				waitNum = waitNum + 1;
 				if (size == 3 || size == 7 || size == 10 || size == 13 || size == 17 || size == 21 || size == 24) {
-					refreshPageAndVideoPlay(waitNum, 50);
+					refreshPageAndVideoPlay(waitNum, 30);
+					videoPlayAndSelectVideoQualityLow();
 				} else {
 					refreshPageAndVideoPlay(waitNum, 150);
 				}
@@ -354,10 +355,11 @@ public class VideoAndQuestion extends VideoAndQuestionOr {
 			util.implicitilyOfSeconds(2);
 
 			for (int a = 0; true; a++) {
-				refreshPageAndVideoPlay(waitNum, 40);
+				refreshPageAndVideoPlay(waitNum, 25);
 				waitNum = waitNum + 1;
-//				util.thread(200);
-				util.mouseClick(getVideoButton());
+
+				videoPlayAndSelectVideoQualityLow();	
+				
 				if (getAllaccept().size() >= 1) {
 					util.printMessage("First Video Waiting  Successfully");
 					util.click(getNextButton(), "Next Button");
@@ -391,5 +393,19 @@ public class VideoAndQuestion extends VideoAndQuestionOr {
 
 		}
 	}
+	int playCount = 0;
+	public void videoPlayAndSelectVideoQualityLow() {
+		if(playCount == 0 || playCount == 4) {
+		util.mouseClick(getVideoButton());
+		util.click(getSelectVideoQuality(), "Video Quality Low", 3);
+		util.click(getSelectVideoQualitySetting(), "Video Quality Low", 2);
+		util.click(getVideoQuality(), "Video Quality Low", 2);
+		}
+		playCount++;
+		
+		if(playCount >= 7) {
+			playCount=0;}
+	}
+	
 
 }

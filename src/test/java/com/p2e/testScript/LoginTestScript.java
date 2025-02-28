@@ -25,15 +25,15 @@ public class LoginTestScript extends BaseTest {
 			
 			try {
 				Login lgn = new Login(webUtil);
-				for (int i = 0; true; i++) {
-					lgn.login();
-					String wrOtp =lgn.findWringOtp();
-					if(wrOtp==null) {
-						break;
-					}else {
-						continue;
-					}
-				}
+//				for (int i = 0; true; i++) {
+//					lgn.login();
+//					String wrOtp =lgn.findWringOtp();
+//					if(wrOtp==null) {
+//						break;
+//					}else {
+//						continue;
+//					}
+//				}
 
 			} catch (Exception e) {
 				System.out.println("Login Option is Not Complite Successfully");

@@ -25,7 +25,7 @@ public class RagistationForm extends RagistationFormOr {
 
 	public void ragistationForm(String excelFilePath) {
 		waitTillRagistation();
-		int ro =util.readAndWriteDataInToExcel("Excel Row Write  ", "ExcelData\\CSC_StateDistAndCenterName.xlsx");
+		int ro =util.readAndWriteDataInToExcel("Excel Row Write  ", "C:\\3_P2E_BackUpOrExleclData\\Starting_Loop_FingdingNameAndState.xlsx");
 		rowCount = ro-1;
 		util.thread(800);
 		
@@ -35,8 +35,6 @@ public class RagistationForm extends RagistationFormOr {
 		state = nalist.get(2);
 		dist = nalist.get(3);
 		institute = nalist.get(4);
-//		link = nalist.get(5);
-//		findWindowsWaiting("My courses");
 
 //Name 
 
@@ -170,7 +168,6 @@ public class RagistationForm extends RagistationFormOr {
 		formaData.add(util.mygetText(getStateName(), 20, 30));
 		formaData.add(util.mygetText(getDistrictName(), 20, 30));
 		formaData.add(util.mygetText(getInstitutionName(), 20, 30));
-//		formaData.add(link);
 		formaData.add(util.currentDateWithTime());
 		return formaData;
 	}
@@ -289,7 +286,7 @@ public class RagistationForm extends RagistationFormOr {
 	}
 int rowCount = 1;
 	public void selectStatDistAndCenter( String excelFilePath) {
-		int ro =util.readAndWriteDataInToExcel("Excel Row Write  ", "ExcelData\\CSC_StateDistAndCenterName.xlsx");
+		int ro =util.readAndWriteDataInToExcel("Excel Row Write  ", "C:\\3_P2E_BackUpOrExleclData\\Starting_Loop_FingdingNameAndState.xlsx");
 		rowCount = ro-1;
 		util.thread(800);
 		ArrayList<String> nalist = util.readDataFromExcelSheet(rowCount, "ExcelData\\RahulP2E_NameAndState.xlsx");

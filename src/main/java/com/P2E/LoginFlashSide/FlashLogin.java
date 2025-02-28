@@ -36,7 +36,7 @@ public class FlashLogin extends FlashLoginOr {
 		util.printMessage("  History Of OTP = " + hOtp);
 		util.printMessage("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 		util.writeDateInToExcelSheet1("Avlable Balance = " + avbalance, "Total History Of OTP = " + hOtp,
-				"Total Used OTP = " + tOPT, "ExcelData\\CenterNameAndAutomation.xlsx", "BalanceOTP");
+				"Total Used OTP = " + tOPT, "C:\\3_P2E_BackUpOrExleclData\\Starting_Loop_FingdingNameAndState.xlsx", "BalanceOTP");
 	}
 
 	public void enterUserIDAndPassword(String userName, String Password) {
@@ -57,7 +57,7 @@ public class FlashLogin extends FlashLoginOr {
 		}
 		String[] value = his.split(" ");
 		
-		util.writeDateInToExcelSheet1(avBl, his, totalOtp, "ExcelData\\CenterNameAndAutomation.xlsx", "BalanceOTP");
+		util.writeDateInToExcelSheet1(avBl, his, totalOtp, "C:\\3_P2E_BackUpOrExleclData\\Starting_Loop_FingdingNameAndState.xlsx", "BalanceOTP");
 
 		util.printMessage(userName + "\t Balance = " + avBl + " \t Recharge = " + totalR + "\t Used OTP = " + totalOtp + "\t "+his);
 

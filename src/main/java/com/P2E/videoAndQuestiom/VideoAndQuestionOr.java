@@ -71,4 +71,15 @@ public class VideoAndQuestionOr {
 	@FindBy(xpath = "//span[text()='Done']")
 	private WebElement doneSubmit;
 	
+	@FindBy(xpath = "//button[text()='more_vert']")
+	private WebElement selectVideoQuality;
+
+	@FindBy(xpath = "//i[text()='settings']")
+	private WebElement selectVideoQualitySetting;
+
+	
+	@FindBy(xpath = "//span[text()='136p']")
+	private WebElement videoQuality;
+
+	
 }
